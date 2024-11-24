@@ -1,0 +1,16 @@
+<p>Ejercicio06 -> Angular!</p>
+
+<div class="calculadora-container">
+   
+    <input type="text" [value]="display" class="display-box" readonly />
+  
+    <!-- Botones generados dinámicamente con nuestro array de numeros del 0 - 9 -->
+    <div class="button-row">
+      <button 
+        *ngFor="let num of numbers" 
+        (click)="onButtonClick(num)" 
+        class="number-button">
+        {{ num }}
+      </button>
+    </div>
+  </div>
